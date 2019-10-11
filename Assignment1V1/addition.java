@@ -1,38 +1,31 @@
 //30012020 Brandon Sin
 package files;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class addition {
 	
 
-	public int sum;
-	public int numberSize;
-	public int numberArray[];
-	Scanner scanner;
+	public double sum;
+	ArrayList<Double> inputs = new ArrayList<Double>();
 	
 	public void userInput() {
-		System.out.println("How many numbers are you going to type?:");
-		scanner = new Scanner(System.in);
-		numberSize = scanner.nextInt();
-		numberArray = new int[numberSize];
-		System.out.println("Enter numbers: (ex. 5 2 3)");
-		
-		for(int counter = 0; counter < numberSize; counter++) {
-			numberArray[counter] = scanner.nextInt();
+	
+		System.out.println("Enter numbers: type done when finish");
+		Scanner scanner = new Scanner(System.in);
+		while(scanner.hasNextDouble()) {
+			inputs.add(scanner.nextDouble());
 		}
-		
 		scanner.close();
-		
-		doAddition(numberSize, numberArray);
-		
+		doAddition(inputs);
 	}
 		
-	public void doAddition(int numberSize, int numberArray[]) {
+	public void doAddition(ArrayList<Double> inputs) {
 
 		sum = 0;
-		for (int counter =0; counter < numberSize; counter++) {
-			sum = numberArray[counter] + sum;
+		for (int counter =0; counter < inputs.size(); counter++) {
+			sum = inputs.get(counter) + sum;
 		}
 	}
 	public void printSum() {

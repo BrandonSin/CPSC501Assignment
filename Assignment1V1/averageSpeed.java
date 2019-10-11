@@ -2,47 +2,47 @@
 package files;
 
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class averageSpeed extends addition{
 	
 	double avgSpeed;
-	public int numberSize;
-	public int numberArray[];
-	Scanner input;
+	ArrayList<Double> distances = new ArrayList<Double>();
+	ArrayList<Double> time = new ArrayList<Double>();
+	Scanner scanner;
 	
-
-	public void doAverageSpeed() {
-		System.out.println("How many distances are you going to enter:");
-		input = new Scanner(System.in);
-		numberSize = input.nextInt();
-		numberArray = new int[numberSize];
-		System.out.println("Enter all the distances: (ex. 5 2 3)");
-		
-		for(int counter = 0; counter < numberSize; counter++) {
-			numberArray[counter] = input.nextInt();
+	public void calcDistance() {
+		System.out.println("What are all the distances? type done when finish");
+		scanner = new Scanner(System.in);
+		while(scanner.hasNextDouble()) {
+			distances.add(scanner.nextDouble());
 		}
-		
-		doAddition(numberSize, numberArray);
-		double totalDistance = super.sum;
 	
-		System.out.println("How many different times are you going to enter:");
-		input = new Scanner(System.in);
-		numberSize = input.nextInt();
-		numberArray = new int[numberSize];
-		System.out.println("Enter all the times: (ex. 5 2 3)");
 		
-		for(int counter = 0; counter < numberSize; counter++) {
-			numberArray[counter] = input.nextInt();
+	}
+	public void calcTime() {
+		System.out.println("What are the times? type done when finish");
+		scanner = new Scanner(System.in);
+		while(scanner.hasNextLine()) {
+			if(scanner.hasNextDouble()) {
+				time.add(scanner.nextDouble());
+			}
+			else {
+				break;
+			}
 		}
+		scanner.close();
 		
-		doAddition(numberSize, numberArray);
-	    double totalTime = super.sum;
-		
-		avgSpeed = totalDistance / totalTime;
-		
-	
 	}
 	
+	public void doAverageSpeed() {
+		doAddition(distances);
+		double totalDistance = super.sum;
+		doAddition(time);
+	    double totalTime = super.sum;
+		avgSpeed = totalDistance / totalTime;
+		
+	}
 	
 	public void printAvgSpeed() {
 		

@@ -1,0 +1,11 @@
+commit 671614e1b1b293ccf7baa22379ccb2626c40ad89
+Author: Brandon Sin <ancesz2000@yahoo.ca>
+Date:   Wed Oct 9 00:49:01 2019 -0600
+
+    Added Readme file
+
+commit 4978d33164b7ea31151fe718fb1275f8bf5dccb6
+Author: Brandon Sin <46876645+BrandonSin@users.noreply.github.com>
+Date:   Wed Oct 9 00:06:59 2019 -0600
+
+    First commit version 1

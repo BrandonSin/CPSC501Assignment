@@ -46,6 +46,8 @@ public class calculator {
 			}
 			if(choice.equals("6")) {
 				averageSpeed avgSpeed = new averageSpeed();
+				avgSpeed.calcDistance();
+				avgSpeed.calcTime();
 				avgSpeed.doAverageSpeed();
 				avgSpeed.printAvgSpeed();
 			}

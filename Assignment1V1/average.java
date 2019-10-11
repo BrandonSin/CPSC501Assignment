@@ -1,5 +1,6 @@
 //30012020 Brandon Sin
 package files;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class average extends addition {
@@ -7,27 +8,23 @@ public class average extends addition {
 	double avg;
 	int size;
 	int arraySize[];
-	Scanner input;
-	
-	public double doAverage() {
-		System.out.println("how many numbers?");
-		input = new Scanner(System.in);
-		size = input.nextInt();
-		arraySize = new int[size];
-		System.out.println("Enter the numbers to be averaged: ");
+	ArrayList<Double> inputs = new ArrayList<Double>();
 
-		for(int counter = 0; counter < size; counter++) {
-			arraySize[counter] = input.nextInt();
+	
+	public void doAverage() {
+		System.out.println("Enter the numbers to be averaged - Type Done when finish?");
+		Scanner scanner = new Scanner(System.in);
+		
+		while(scanner.hasNextDouble()){
+			inputs.add(scanner.nextDouble());
+			
 		}
 		
-		input.close();
-	
-		doAddition(size, arraySize);
+		scanner.close();
+		doAddition(inputs);
 		
-		int sum = super.sum;
-		double total =  size; //need to convert double to get a double as answer
-		avg = sum / total;
-		return avg;
+		double sum = super.sum;
+		avg = sum / inputs.size();
 	}
 	public void printAvg() {
 		System.out.println("The Average is: " + avg);
