@@ -1,31 +1,43 @@
 //30012020 Brandon Sin
 package files;
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class quadraticFormula {
 	
+	ArrayList<Double> inputs = new ArrayList<Double>();
+	public double plus3;
+	public double minus3;
+	
 	public void doQuadraticFormula() {
-		System.out.println("enter numbers for a, b and c");
+		System.out.println("enter numbers for a, b and c. Type done when finish");
 		Scanner scanner = new Scanner(System.in);
-		int array[] = new int[3];
-		for (int counter = 0; counter <= 2; counter++) {
-			array[counter] = scanner.nextInt();
+		//populate arraylist from user input
+		while(scanner.hasNextDouble()) {
+			inputs.add(scanner.nextDouble());
 		}
+		
+		//initialize
 		try {
-		double plus1, plus2, plus3, minus1, minus2, minus3;
+		double plus1, plus2, minus1, minus2;
 		
-		if((array[1] * array[1])-4*array[0]*array[2] < 0){
-			System.out.println("Cannot sqroot negative number, Terminate program");
-			System.exit(0);
+		//base formula of quadratic (numerator)
+		double step1 = ((inputs.get(1) * inputs.get(1))-4*inputs.get(2)*inputs.get(0));
+		//Check if negative number exists in sqroot
+		if(step1 < 0){
+			System.out.println("Cannot sqroot negative number");
 		}
-		else {
-			plus1 = Math.sqrt((array[1] * array[1])-4*array[0]*array[2]);
-			plus2 = -array[1] + plus1;
-			plus3 = plus2/(2*array[0]);
 		
-			minus1 = Math.sqrt((array[1] * array[1])-4*array[0]*array[2]);
-			minus2 = -array[1] - minus1;
-			minus3 = minus2/(2*array[0]);
+		else {
+			//quadratic formula when positive
+			plus1 = Math.sqrt(step1);
+			plus2 = -inputs.get(1) + plus1;
+			plus3 = plus2/(2*inputs.get(0));
+		
+			//quadratic formula when negative
+			minus1 = Math.sqrt(step1);
+			minus2 = -inputs.get(1) - minus1;
+			minus3 = minus2/(2*inputs.get(0));
 		
 			System.out.print("X = " + plus3 + " or = " + minus3);
 			}

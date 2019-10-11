@@ -30,6 +30,7 @@ public class averageSpeed {
 			}
 		}
 		data.scanner.close();
+		doAverageSpeed();
 		
 	}
 	

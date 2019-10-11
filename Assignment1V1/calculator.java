@@ -50,7 +50,6 @@ public class calculator {
 				averageSpeed avgSpeed = new averageSpeed();
 				avgSpeed.calcDistance();
 				avgSpeed.calcTime();
-				avgSpeed.doAverageSpeed();
 				avgSpeed.printAvgSpeed();
 				break;
 				
@@ -60,4 +59,5 @@ public class calculator {
 			System.out.println(e);
 		}
 	}
+
 }

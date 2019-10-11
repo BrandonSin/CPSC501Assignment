@@ -1,27 +1,25 @@
 //30012020 Brandon Sin
 package files;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class subtraction {
+	public double difference;
+	ArrayList<Double> inputs = new ArrayList<Double>();
 	
-
-	public int doSubtraction() {
-		System.out.println("How many numbers are you going to type?:");
+	public void doSubtraction() {
+		System.out.println("Enter Numbers to be subtracted? Type done when finish");
 		Scanner scanner = new Scanner(System.in);
-		int numberSize = scanner.nextInt();
-		int numberArray[] = new int[numberSize];
-		
-		System.out.println("Enter numbers: (ex. 5 2 3)");
-		for(int counter = 0; counter < numberSize; counter++) {
-			numberArray[counter] = scanner.nextInt();
+		while(scanner.hasNextDouble()) {
+			inputs.add(scanner.nextDouble());
 		}
+		
 		scanner.close();
-		int difference = numberArray[0];
-		for (int counter =1; counter < numberSize; counter++) {
-			difference = difference - numberArray[counter];
+		difference = inputs.get(0);
+		for (int counter =1; counter < inputs.size(); counter++) {
+			difference = difference - inputs.get(counter);
 		}
 		System.out.println(difference);
-		return difference;
 	}
 
 }

@@ -1,26 +1,23 @@
 //30012020 Brandon Sin
 package files;
 import java.util.Scanner;
-
+import java.util.ArrayList;
 public class multiplication {
 	
-	public int doMultiplication() {
-		int product = 1;
-		System.out.println("How many numbers are you going to type?:");
+	ArrayList<Double> inputs = new ArrayList<Double>();
+	public double product = 1;
+	
+	public void doMultiplication() {
+		System.out.println("Input numbers to be multiplied. Type done when finish");
 		Scanner scanner = new Scanner(System.in);
-		int numberSize = scanner.nextInt();
-		int numberArray[] = new int[numberSize];
-		
-		System.out.println("Enter numbers: (ex. 5 2 3)");
-		for(int counter = 0; counter < numberSize; counter++) {
-			numberArray[counter] = scanner.nextInt();
+		while(scanner.hasNextDouble()) {
+			inputs.add(scanner.nextDouble());
 		}
 		scanner.close();
-		for (int counter =0; counter < numberSize; counter++) {
-			product = numberArray[counter] * product;
+		for (int counter =0; counter < inputs.size(); counter++) {
+			product = inputs.get(counter) * product;
 		}
 		System.out.println(product);
 		
-		return product;
 	}
 }
