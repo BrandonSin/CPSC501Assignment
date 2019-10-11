@@ -3,11 +3,12 @@ package files;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class average  {
+public class Average  {
 	
-	averageData data = new averageData(new ArrayList<Double>());
-	addition add = new addition();
+	AverageData data = new AverageData(new ArrayList<Double>());
+	Addition add = new Addition();
 
+	//method takes user's input and does operation
 	public void doAverage() {
 		System.out.println("Enter the numbers to be averaged - Type Done when finish?");
 		Scanner scanner = new Scanner(System.in);

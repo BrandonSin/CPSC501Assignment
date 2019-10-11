@@ -9,14 +9,14 @@ import java.util.ArrayList;
 //13 tests, 8 should pass and 5 should fail
 
 public class Test {
-	calculator calc = new calculator();
-	subtraction test_sub = new subtraction();
-	addition test_add = new addition();
-	multiplication test_mul = new multiplication();
-	division test_div = new division();
-	quadraticFormula test_qf = new quadraticFormula();
-	averageSpeed test_avgs = new averageSpeed();
-	average test_avg = new average();
+	Calculator calc = new Calculator();
+	Subtraction test_sub = new Subtraction();
+	Addition test_add = new Addition();
+	Multiplication test_mul = new Multiplication();
+	Division test_div = new Division();
+	QuadraticFormula test_qf = new QuadraticFormula();
+	AverageSpeed test_avgs = new AverageSpeed();
+	Average test_avg = new Average();
 	
 	ArrayList<Double> list = new ArrayList<Double>();
 	
@@ -100,8 +100,8 @@ public class Test {
 		InputStream in = new ByteArrayInputStream(input.getBytes());
 		System.setIn(in);
 		test_qf.doQuadraticFormula();
-		assertEquals(-1, test_qf.plus3, 0.1);
-		assertEquals(-2.0, test_qf.minus3, 0.1);
+		assertEquals(-1, test_qf.ansPositive, 0.1);
+		assertEquals(-2.0, test_qf.ansNegative, 0.1);
 		
 	}
 	@org.junit.Test
@@ -110,8 +110,8 @@ public class Test {
 		InputStream in = new ByteArrayInputStream(input.getBytes());
 		System.setIn(in);
 		test_qf.doQuadraticFormula();
-		assertEquals(0.0, test_qf.plus3, 0.1);
-		assertEquals(0.0, test_qf.minus3, 0.1);
+		assertEquals(0.0, test_qf.ansPositive, 0.1);
+		assertEquals(0.0, test_qf.ansNegative, 0.1);
 		
 	}
 	

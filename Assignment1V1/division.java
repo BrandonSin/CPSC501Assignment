@@ -4,12 +4,12 @@ import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.ArrayList;
 
-public class division {
+public class Division {
 	
 	public double quotient;
 	ArrayList<Double> inputs = new ArrayList<Double>();
 
-	
+	//method for taking user's input and doing division operation
 	public void doDivision() {
 		System.out.println("Input numbers for division. Type done when finish");
 		Scanner scanner = new Scanner(System.in);

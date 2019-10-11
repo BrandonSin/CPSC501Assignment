@@ -3,10 +3,11 @@ package files;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class subtraction {
+public class Subtraction {
 	public double difference;
 	ArrayList<Double> inputs = new ArrayList<Double>();
 	
+	//method for taking user's input and subtraction operation
 	public void doSubtraction() {
 		System.out.println("Enter Numbers to be subtracted? Type done when finish");
 		Scanner scanner = new Scanner(System.in);

@@ -2,11 +2,12 @@
 package files;
 import java.util.Scanner;
 import java.util.ArrayList;
-public class multiplication {
+public class Multiplication {
 	
 	ArrayList<Double> inputs = new ArrayList<Double>();
 	public double product = 1;
 	
+	//method for taking user's input and multiplication operation
 	public void doMultiplication() {
 		System.out.println("Input numbers to be multiplied. Type done when finish");
 		Scanner scanner = new Scanner(System.in);

@@ -4,12 +4,14 @@ package files;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class addition {
+//class for doing addition
+public class Addition {
 	
 
 	public double sum;
 	ArrayList<Double> inputs = new ArrayList<Double>();
 	
+	//method takes in user's input 
 	public void userInput() {
 	
 		System.out.println("Enter numbers: type done when finish");
@@ -20,7 +22,7 @@ public class addition {
 		scanner.close();
 		doAddition(inputs);
 	}
-		
+	//addition operation
 	public void doAddition(ArrayList<Double> inputs) {
 
 		sum = 0;

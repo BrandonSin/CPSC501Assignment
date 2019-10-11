@@ -3,7 +3,8 @@ package files;
  import java.util.*;
  
 
-public class calculator {
+public class Calculator {
+	//main class for switching on operations
 	public static void main(String[] args) {
 		System.out.println("Choose which operation to perform: Press the corresponding number\n" + "Multiplication: 0\nAddition: 1"
 				+ "\nSubtraction: 2\nDivision: 3\nQuadratic Equation: 4\nAverages: 5 \nAverage Speed: 6");
@@ -15,39 +16,39 @@ public class calculator {
 			switch (choice) {
 				
 			case "0": 
-				multiplication multi = new multiplication();
+				Multiplication multi = new Multiplication();
 				multi.doMultiplication();
 				break;
 				
 			case "1":
-				addition add = new addition();
+				Addition add = new Addition();
 				add.userInput();
 				add.printSum();
 				break;
 				
 			case "2":
-				subtraction sub = new subtraction();
+				Subtraction sub = new Subtraction();
 				sub.doSubtraction(); 
 				break;
 				
 			case "3":
-				division div = new division();
+				Division div = new Division();
 				div.doDivision();
 				break;
 				
 			case "4":
-				quadraticFormula quad = new quadraticFormula();
+				QuadraticFormula quad = new QuadraticFormula();
 				quad.doQuadraticFormula(); 
 				break;
 			
 			case "5":
-				average avg = new average();
+				Average avg = new Average();
 				avg.doAverage();
 				avg.printAvg();
 				break;
 				
 			case "6":
-				averageSpeed avgSpeed = new averageSpeed();
+				AverageSpeed avgSpeed = new AverageSpeed();
 				avgSpeed.calcDistance();
 				avgSpeed.calcTime();
 				avgSpeed.printAvgSpeed();

@@ -4,11 +4,12 @@ package files;
 import java.util.Scanner;
 import java.util.ArrayList;
 
-public class averageSpeed {
+public class AverageSpeed {
 	
-	averageSpeedData data = new averageSpeedData(new ArrayList<Double>(), new ArrayList<Double>());
-	addition add = new addition(); //replace inheritance with delegation 
+	AverageSpeedData data = new AverageSpeedData(new ArrayList<Double>(), new ArrayList<Double>());
+	Addition add = new Addition(); //replace inheritance with delegation 
 	
+	//takes userinput for distance
 	public void calcDistance() {
 		System.out.println("What are all the distances? type done when finish");
 		data.scanner = new Scanner(System.in);
@@ -18,6 +19,7 @@ public class averageSpeed {
 	
 		
 	}
+	//takes userinput for time
 	public void calcTime() {
 		System.out.println("What are the times? type done when finish");
 		data.scanner = new Scanner(System.in);
@@ -34,6 +36,7 @@ public class averageSpeed {
 		
 	}
 	
+	//calc average speed
 	public void doAverageSpeed() {
 		add.doAddition(data.distances);
 		double totalDistance = add.sum;

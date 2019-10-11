@@ -3,11 +3,11 @@ package files;
 import java.util.Scanner;
 import java.util.ArrayList;
 
-public class quadraticFormula {
+public class QuadraticFormula {
 	
 	ArrayList<Double> inputs = new ArrayList<Double>();
-	public double plus3;
-	public double minus3;
+	public double ansPositive;
+	public double ansNegative;
 	
 	public void doQuadraticFormula() {
 		System.out.println("enter numbers for a, b and c. Type done when finish");
@@ -19,7 +19,7 @@ public class quadraticFormula {
 		
 		//initialize
 		try {
-		double plus1, plus2, minus1, minus2;
+		double beginningStep, intermediateStep;
 		
 		//base formula of quadratic (numerator)
 		double step1 = ((inputs.get(1) * inputs.get(1))-4*inputs.get(2)*inputs.get(0));
@@ -30,16 +30,15 @@ public class quadraticFormula {
 		
 		else {
 			//quadratic formula when positive
-			plus1 = Math.sqrt(step1);
-			plus2 = -inputs.get(1) + plus1;
-			plus3 = plus2/(2*inputs.get(0));
+			beginningStep = Math.sqrt(step1);
+			intermediateStep = -inputs.get(1) + beginningStep;
+			ansPositive = intermediateStep/(2*inputs.get(0));
 		
 			//quadratic formula when negative
-			minus1 = Math.sqrt(step1);
-			minus2 = -inputs.get(1) - minus1;
-			minus3 = minus2/(2*inputs.get(0));
+			intermediateStep = -inputs.get(1) - beginningStep;
+			ansNegative = intermediateStep/(2*inputs.get(0));
 		
-			System.out.print("X = " + plus3 + " or = " + minus3);
+			System.out.print("X = " + ansPositive + " or = " + ansNegative);
 			}
 		}
 		catch(Exception e) {
