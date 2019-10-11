@@ -12,51 +12,52 @@ public class calculator {
 		
 		
 		try {
-			if(choice.equals("0")) {
+			switch (choice) {
+				
+			case "0": 
 				multiplication multi = new multiplication();
 				multi.doMultiplication();
+				break;
 				
-			}
-			if(choice.equals("1")) {
+			case "1":
 				addition add = new addition();
 				add.userInput();
 				add.printSum();
-			
-			}
-			if(choice.equals("2")) {
+				break;
+				
+			case "2":
 				subtraction sub = new subtraction();
-				sub.doSubtraction();
-			}
-			if(choice.equals("3")) {
+				sub.doSubtraction(); 
+				break;
+				
+			case "3":
 				division div = new division();
 				div.doDivision();
-			}
-			
-			if(choice.equals("4")) {
+				break;
+				
+			case "4":
 				quadraticFormula quad = new quadraticFormula();
 				quad.doQuadraticFormula(); 
-	
-	
-			}
-			if(choice.equals("5")) {
+				break;
+			
+			case "5":
 				average avg = new average();
 				avg.doAverage();
 				avg.printAvg();
-	
-			}
-			if(choice.equals("6")) {
+				break;
+				
+			case "6":
 				averageSpeed avgSpeed = new averageSpeed();
 				avgSpeed.calcDistance();
 				avgSpeed.calcTime();
 				avgSpeed.doAverageSpeed();
 				avgSpeed.printAvgSpeed();
+				break;
+				
 			}
 		}
 		catch(Exception e) {
 			System.out.println(e);
 		}
-		
-		
 	}
-
 }
