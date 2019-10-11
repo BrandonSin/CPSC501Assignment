@@ -1,3 +1,39 @@
+commit a47fb40657e62cc8ccd201209f85093ee158a3c5
+Author: Brandon Sin <ancesz2000@yahoo.ca>
+Date:   Fri Oct 11 07:46:38 2019 -0600
+
+    Refactor (naming convention) update on test
+
+commit cef8256096d68be0d16d7a833fcdbb937c56138f
+Author: Brandon Sin <ancesz2000@yahoo.ca>
+Date:   Fri Oct 11 05:13:47 2019 -0600
+
+    update files for testing purposes and uploading unit test
+
+commit b86be33ebe40c3bb024ccd88e894e8d2c3b47e2a
+Author: Brandon Sin <ancesz2000@yahoo.ca>
+Date:   Fri Oct 11 01:15:40 2019 -0600
+
+    Refactor (replace inheritance with delegation)
+
+commit a16085eac5aa34c024d2376c4d1de5e43ef87516
+Author: Brandon Sin <ancesz2000@yahoo.ca>
+Date:   Fri Oct 11 00:53:00 2019 -0600
+
+    Refactor Dataclump
+
+commit 5d6ff6ec72d2da595e336111927653b96de72561
+Author: Brandon Sin <ancesz2000@yahoo.ca>
+Date:   Thu Oct 10 23:38:59 2019 -0600
+
+    Refactor Calculator (if statements)
+
+commit 1f2ec819061e66768d696e837d9935a08cd485c9
+Author: Brandon Sin <ancesz2000@yahoo.ca>
+Date:   Thu Oct 10 21:55:47 2019 -0600
+
+    refactor addition,average,averagespeed (long method)
+
 commit 671614e1b1b293ccf7baa22379ccb2626c40ad89
 Author: Brandon Sin <ancesz2000@yahoo.ca>
 Date:   Wed Oct 9 00:49:01 2019 -0600
