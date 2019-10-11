@@ -6,47 +6,44 @@ import java.util.ArrayList;
 
 public class averageSpeed extends addition{
 	
-	double avgSpeed;
-	ArrayList<Double> distances = new ArrayList<Double>();
-	ArrayList<Double> time = new ArrayList<Double>();
-	Scanner scanner;
-	
+	averageSpeedData data = new averageSpeedData(new ArrayList<Double>(), new ArrayList<Double>());
+
 	public void calcDistance() {
 		System.out.println("What are all the distances? type done when finish");
-		scanner = new Scanner(System.in);
-		while(scanner.hasNextDouble()) {
-			distances.add(scanner.nextDouble());
+		data.scanner = new Scanner(System.in);
+		while(data.scanner.hasNextDouble()) {
+			data.distances.add(data.scanner.nextDouble());
 		}
 	
 		
 	}
 	public void calcTime() {
 		System.out.println("What are the times? type done when finish");
-		scanner = new Scanner(System.in);
-		while(scanner.hasNextLine()) {
-			if(scanner.hasNextDouble()) {
-				time.add(scanner.nextDouble());
+		data.scanner = new Scanner(System.in);
+		while(data.scanner.hasNextLine()) {
+			if(data.scanner.hasNextDouble()) {
+				data.time.add(data.scanner.nextDouble());
 			}
 			else {
 				break;
 			}
 		}
-		scanner.close();
+		data.scanner.close();
 		
 	}
 	
 	public void doAverageSpeed() {
-		doAddition(distances);
+		doAddition(data.distances);
 		double totalDistance = super.sum;
-		doAddition(time);
+		doAddition(data.time);
 	    double totalTime = super.sum;
-		avgSpeed = totalDistance / totalTime;
+		data.avgSpeed = totalDistance / totalTime;
 		
 	}
 	
 	public void printAvgSpeed() {
 		
-		System.out.println("The average speed is: " + avgSpeed);
+		System.out.println("The average speed is: " + data.avgSpeed);
 	
 		
 	}
