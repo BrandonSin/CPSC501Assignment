@@ -3,10 +3,10 @@ package files;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class average extends addition {
+public class average  {
 	
 	averageData data = new averageData(new ArrayList<Double>());
-
+	addition add = new addition();
 
 	public void doAverage() {
 		System.out.println("Enter the numbers to be averaged - Type Done when finish?");
@@ -18,9 +18,10 @@ public class average extends addition {
 		}
 		
 		scanner.close();
-		doAddition(data.inputs);
 		
-		double sum = super.sum;
+		add.doAddition(data.inputs); //replaced inheritance with delegation
+		
+		double sum = add.sum;
 		data.avg = sum / data.inputs.size();
 	}
 	public void printAvg() {
